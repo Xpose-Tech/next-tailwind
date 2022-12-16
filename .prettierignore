@@ -1,4 +1,5 @@
 .yarn
 .next
+.commitlintrc
 dist
 node_modules
