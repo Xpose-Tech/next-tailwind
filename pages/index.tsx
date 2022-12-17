@@ -3,14 +3,13 @@ import CatCard from '../components/cards/base/CatCard';
 import { mockCatCardProps } from '../components/cards/base/CatCard.mocks';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 import SidebarLayout from '../components/layouts/sidebar/SidebarLayout';
-import styles from '../styles/Home.module.css';
 import { NextPageWithLayout } from './page';
 
 const inter = Inter({ subsets: ['latin'] });
 
 const Home: NextPageWithLayout = () => {
   return (
-    <section className={styles.main}>
+    <section className="bg-gradient-to-r from-cyan-500 to-blue-500">
       <h1>Create Next App</h1>
       <CatCard {...mockCatCardProps.base} />
       <CatCard {...mockCatCardProps.base} />
