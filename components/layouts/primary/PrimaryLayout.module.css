@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  justify-content: space-around;
+  height: calc(100vh- 64px);
+  background: white;
+  color: black;
+}
+
+.main > section {
+  padding: 32px;
+}
