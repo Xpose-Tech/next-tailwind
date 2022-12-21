@@ -1,19 +1,13 @@
 import { Inter } from '@next/font/google';
-import CatCard from '../components/cards/base/CatCard';
-import { mockCatCardProps } from '../components/cards/base/CatCard.mocks';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
-import SidebarLayout from '../components/layouts/sidebar/SidebarLayout';
 import { NextPageWithLayout } from './page';
 
 const inter = Inter({ subsets: ['latin'] });
 
 const Home: NextPageWithLayout = () => {
   return (
-    <section className="bg-gradient-to-r from-cyan-500 to-blue-500">
-      <h1>Create Next App</h1>
-      <CatCard {...mockCatCardProps.base} />
-      <CatCard {...mockCatCardProps.base} />
-      <CatCard {...mockCatCardProps.base} />
+    <section className="bg-gradient-to-r from-cyan-500 to-blue-500 border-1 p-2 px-4 rounded text-white">
+      <h1 className={inter.className}>Integration Redux</h1>
     </section>
   );
 };
@@ -21,12 +15,7 @@ const Home: NextPageWithLayout = () => {
 export default Home;
 
 Home.getLayout = (page) => {
-  return (
-    <PrimaryLayout>
-      <SidebarLayout />
-      {page}
-    </PrimaryLayout>
-  );
+  return <PrimaryLayout>{page}</PrimaryLayout>;
 };
 
 // export default function Home() {
